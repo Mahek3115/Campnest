@@ -1,0 +1,282 @@
+* { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: #f0f0f0; }
+
+    /* Auth section */
+    #auth-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #18bc9c, #2c3e50);
+    }
+    .form-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    h2 { text-align: center; color: #2c3e50; }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    button {
+      background: #18bc9c;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    .toggle-link {
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+      color: #18bc9c;
+      cursor: pointer;
+    }
+    .hidden { display: none; }
+
+    /* CampNest Website */
+    #main-website { display: none; }
+    nav {
+      background-color: #2c3e50;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 {
+      color: #fff;
+    }
+    nav .logout-btn {
+      background: #e74c3c;
+      border-radius: 3px;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100px;
+    }
+  
+
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+    }
+    nav {
+      background-color: #2c3e50;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 {
+      color: #ffffff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin-left: 1.5rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+    }
+    nav ul li a:hover {
+      color: #18bc9c;
+    }
+    .home {
+      position: relative;
+      background-image: url('https://static.vecteezy.com/system/resources/previews/043/173/381/non_2x/campfire-burning-brightly-near-blue-tent-free-photo.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 2rem;
+    }
+    .home h2 {
+      font-size: 2.5rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+    .home p {
+      max-width: 600px;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    .home button {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 16px;
+      background-color: #18bc9c;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form, .ticket, .thank-you {
+      display: none;
+      background: white;
+      padding: 2rem;
+      max-width: 500px;
+      margin: 2rem auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+    .booking-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+
+    }
+    .booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+    .booking-form button {
+      background-color: #2c3e50;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .ticket {
+      background-color: #e1f7f0;
+      border-left: 5px solid #18bc9c;
+    }
+    #ticketContent h2 {
+      margin-top: 0;
+    }
+    .thank-you {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+    }
+    #shopping {
+      padding: 2rem;
+      text-align: center;
+    }
+    #shopping h2 {
+      margin-bottom: 1.5rem;
+    }
+    .advertisement-container {
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 1rem 0;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+    .advertisement {
+      display: inline-block;
+      margin-right: 20px;
+      animation: scrollAd 15s linear infinite;
+    }
+    .advertisement img {
+      height: 120px; /* Increased height */
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      vertical-align: middle; /* Align image with potential text */
+    }
+    @keyframes scrollAd {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .shopping-sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Slightly wider min-width */
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .shopping-section {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .shopping-section img {
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+    .shopping-section h3 {
+      font-size: 1rem;
+      margin-top: 0;
+      margin-bottom: 0.2rem;
+    }
+    .shopping-section p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+    .shopping-section button {
+      background-color: #18bc9c;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .shopping-section button:hover {
+      background-color: #148f77;
+    }
+    #blog, #review, #feedback {
+      padding: 2rem;
+      text-align: center;
+    }
+    #blog h2, #review h2, #feedback h2 {
+      margin-bottom: 1rem;
+    }
+    #feedback-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    #feedback-form input, #feedback-form textarea, #feedback-form button {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    #feedback-form button {
+      background-color: #18bc9c;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #feedback-form button:hover {
+      background-color: #148f77;
+    }

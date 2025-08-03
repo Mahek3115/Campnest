@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   CampNest Login/Register
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Login/Register UI -->
+  <div id="auth-container">
+   <div class="form-box" id="loginBox">
+    <h2>
+     Login
+    </h2>
+    <input id="loginEmail" placeholder="Email" type="email"/>
+    <input id="loginPassword" placeholder="Password" type="password"/>
+    <button onclick="loginUser()">
+     Login
+    </button>
+    <span class="toggle-link" onclick="showRegister()">
+     New user? Register here
+    </span>
+   </div>
+   <div class="form-box hidden" id="registerBox">
+    <h2>
+     Register
+    </h2>
+    <input id="regName" placeholder="Your Name" type="text"/>
+    <input id="regEmail" placeholder="Email" type="email"/>
+    <input id="regPassword" placeholder="Password" type="password"/>
+    <button onclick="registerUser()">
+     Register
+    </button>
+    <span class="toggle-link" onclick="showLogin()">
+     Already have an account?
+    </span>
+   </div>
+  </div>
+  <!-- Main Website -->
+  <div id="main-website">
+   <nav>
+    <button class="logout-btn" onclick="logout()" width="50px">
+     Logout
+    </button>
+   </nav>
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+   <title>
+    CampNest
+   </title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+   </script>
+   <body>
+    <nav>
+     <h1>
+      CampNest
+     </h1>
+     <ul>
+      <li>
+       <a href="#home">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="#shopping">
+        Shopping
+       </a>
+      </li>
+      <li>
+       <a href="#blog">
+        Blog
+       </a>
+      </li>
+      <li>
+       <a href="#review">
+        Review
+       </a>
+      </li>
+      <li>
+       <a href="#feedback">
+        Send Feedback
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <section class="home" id="home">
+     <h2 style="color: white;">
+      Enjoy your camping time
+     </h2>
+     <p>
+      Explore the wilderness, sleep under stars, and make unforgettable memories. Whether it's a mountain retreat or a beachside escape, CampNest has your adventure covered.
+     </p>
+     <button id="bookYourCampBtn">
+      Book Your Camp
+     </button>
+    </section>
+    <div class="booking-form" id="bookingForm">
+     <h3>
+      Book Your Camp
+     </h3>
+     <input id="fullName" placeholder="Full Name" type="text"/>
+     <input id="email" placeholder="Your Email Address" type="email"/>
+     <select id="location">
+      <option value="">
+       -- Select Beach Location --
+      </option>
+      <option value="Goa">
+       Goa
+      </option>
+      <option value="Alibaug">
+       Alibaug
+      </option>
+      <option value="Gokarna">
+       Gokarna
+      </option>
+      <option value="Kovalam">
+       Kovalam
+      </option>
+      <option value="Tarkarli">
+       Tarkarli
+      </option>
+      <option value="Radhanagar">
+       Radhanagar
+      </option>
+     </select>
+     <input id="date" type="date"/>
+     <input id="people" placeholder="Number of People" type="number"/>
+     <button onclick="generateTicket()">
+      Confirm Booking
+     </button>
+    </div>
+    <div class="ticket" id="ticketBox">
+     <div id="ticketContent">
+     </div>
+     <button onclick="downloadTicketPDF()">
+      Download Ticket
+     </button>
+    </div>
+    <div class="thank-you" id="thankYouMsg">
+     🎉 Thank you for booking with CampNest! A copy has been sent to your email.
+    </div>
+    <section id="shopping">
+     <h2>
+      Gear Up for Your Adventure
+     </h2>
+     <div class="advertisement-container">
+      <div class="advertisement">
+       <img alt="Branded Tent" src="https://m.media-amazon.com/images/I/51DpvulNnUL._AC_UL480_FMwebp_QL65_.jpg"/>
+      </div>
+      <div class="advertisement">
+       <img alt="Travelling Bag" src="https://m.media-amazon.com/images/I/41pHPvQThtL._AC_SR250,250_QL65_.jpg"/>
+      </div>
+      <div class="advertisement">
+       <img alt="Axe or Knife" src="https://m.media-amazon.com/images/I/71dPJesyGuL._AC_UL480_FMwebp_QL65_.jpg"/>
+      </div>
+      <div class="advertisement">
+       <img alt="Camping Shoes" src="https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/7a8e13b6-8aab-42a9-95e5-17ba4b524747._CR0,0,1200,628_SX507_CB1169409_QL70_.png"/>
+      </div>
+     </div>
+     <div class="shopping-sections">
+      <div class="shopping-section">
+       <img alt="Backpacks" src="https://m.media-amazon.com/images/I/41pHPvQThtL._AC_SR250,250_QL65_.jpg"/>
+       <h3>
+        Backpacks
+       </h3>
+       <p>
+        ₹ 1,299
+       </p>
+       <button onclick="window.open('https://www.amazon.in/s?k=camping+backpacks', '_blank');">
+        Shop Now
+       </button>
+      </div>
+      <div class="shopping-section">
+       <img alt="Sleeping Bags" src="https://m.media-amazon.com/images/I/41sYBoZX6mL._SY300_SX300_QL70_FMwebp_.jpg"/>
+       <h3>
+        Sleeping Bags
+       </h3>
+       <p>
+        ₹ 2,450
+       </p>
+       <button onclick="window.open('https://www.amazon.in/s?k=camping+sleeping+bags', '_blank');">
+        Shop Now
+       </button>
+      </div>
+      <div class="shopping-section">
+       <img alt="Tents" src="https://m.media-amazon.com/images/I/51DpvulNnUL._AC_UL480_FMwebp_QL65_.jpg"/>
+       <h3>
+        Tents
+       </h3>
+       <p>
+        ₹ 4,999
+       </p>
+       <button onclick="window.open('https://www.amazon.in/s?k=camping+tents', '_blank');">
+        Shop Now
+       </button>
+      </div>
+      <div class="shopping-section">
+       <img alt="Headlamps &amp; Lighting" src="https://m.media-amazon.com/images/I/41Ee+1LXh3L._AC_UL480_FMwebp_QL65_.jpg"/>
+       <h3>
+        Headlamps
+       </h3>
+       <p>
+        ₹ 349
+       </p>
+       <button onclick="window.open('https://www.amazon.in/s?k=camping+headlamps', '_blank');">
+        Shop Now
+       </button>
+      </div>
+      <div class="shopping-section">
+       <img alt="Cooking Gear" src="https://m.media-amazon.com/images/I/718uG89TUtL._AC_UL480_FMwebp_QL65_.jpg"/>
+       <h3>
+        Cooking Gear
+       </h3>
+       <p>
+        ₹ 1,875
+       </p>
+       <button onclick="window.open('https://www.amazon.in/s?k=camping+cookware', '_blank');">
+        Shop Now
+       </button>
+      </div>
+      <div class="shopping-section">
+       <img alt="Footwear" src="https://m.media-amazon.com/images/I/71dPJesyGuL._AC_UL480_FMwebp_QL65_.jpg"/>
+       <h3>
+        Footwear
+       </h3>
+       <p>
+        ₹ 3,199
+       </p>
+       <button onclick="window.open('https://www.amazon.in/s?k=camping+shoes', '_blank');">
+        Shop Now
+       </button>
+      </div>
+     </div>
+    </section>
+    <section id="blog">
+     <h2>
+      🌲 CampNest Blog
+     </h2>
+     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+      <div style="max-width: 300px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden;">
+       <img alt="Blog 1" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" style="width: 100%; height: 180px; object-fit: cover;"/>
+       <div style="padding: 1rem;">
+        <h3>
+         10 Essential Camping Tips
+        </h3>
+        <p style="font-size: 0.95rem; color: #444;">
+         Plan better, pack smarter, and enjoy nature safely with these simple tips every camper should know.
+        </p>
+        <a href="#" style="color: #18bc9c; font-weight: bold;">
+         Read More
+        </a>
+       </div>
+      </div>
+      <div style="max-width: 300px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden;">
+       <img alt="Blog 2" src="https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce" style="width: 100%; height: 180px; object-fit: cover;"/>
+       <div style="padding: 1rem;">
+        <h3>
+         Top 5 Hidden Camping Spots
+        </h3>
+        <p style="font-size: 0.95rem; color: #444;">
+         Discover offbeat destinations in nature that offer peace, beauty, and fewer crowds.
+        </p>
+        <a href="#" style="color: #18bc9c; font-weight: bold;">
+         Read More
+        </a>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="review">
+     <h2>
+      🌟 Customer Reviews
+     </h2>
+     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+      <div style="max-width: 280px; background: #fff; border-radius: 10px; padding: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: left;">
+       <img alt="User" src="https://randomuser.me/api/portraits/women/45.jpg" style="width: 60px; border-radius: 50%;"/>
+       <h4 style="margin: 0.5rem 0 0.2rem;">
+        Ritika Sharma
+       </h4>
+       <p style="font-size: 0.9rem; color: #777;">
+        “CampNest gave us the best mountain camping experience. Everything was well organized!”
+       </p>
+       <p style="color: #f1c40f;">
+        ★★★★★
+       </p>
+      </div>
+      <div style="max-width: 280px; background: #fff; border-radius: 10px; padding: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: left;">
+       <img alt="User" src="https://randomuser.me/api/portraits/men/32.jpg" style="width: 60px; border-radius: 50%;"/>
+       <h4 style="margin: 0.5rem 0 0.2rem;">
+        Aman Gupta
+       </h4>
+       <p style="font-size: 0.9rem; color: #777;">
+        “From tents to food, CampNest took care of everything. Loved the beachside camp!”
+       </p>
+       <p style="color: #f1c40f;">
+        ★★★★☆
+       </p>
+      </div>
+     </div>
+    </section>
+    <section id="feedback">
+     <h2>
+      Send Us Your Feedback
+     </h2>
+     <p>
+      We'd love to hear about your experience! Share your thoughts and suggestions to help us improve.
+     </p>
+     <form id="feedback-form">
+      <input placeholder="Your Name" type="text"/>
+      <input placeholder="Your Email" type="email"/>
+      <textarea placeholder="Your Feedback"></textarea>
+      <button onclick="alert('Feedback Sent successfully')" type="submit">
+       Submit Feedback
+      </button>
+     </form>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+    </script>
+   </body>
+  </div>
+  <script src="js/script.js">
+  </script>
+ </body>
+</html>
+<!-- You can paste your entire CampNest website code here -->
+<!-- JavaScript -->
